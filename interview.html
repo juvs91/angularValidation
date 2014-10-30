@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="msInterview">
+	<head>                             
+		<!-- i load the angular and jquery lib with the source because it's just for a sample code, if this was a real project i will download the lib and add them to the project -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
+		</script>    
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+		</script>      
+		<script type="text/javascript" src="js/qunit.js"></script>                                                                                     
+		<script type="text/javascript" src="js/core.js"></script>  
+		<script type="text/javascript" src="js/test.js"></script>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">   
+		<link rel="stylesheet" href="css/qunit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+	</head>
+	<body > 
+		<div ng-controller="formValidator" class="center">
+			<form action="" method="post" accept-charset="utf-8" role ="form" > 
+				<fieldset>                   
+					<legend>sign up:</legend>
+					<label for="firstName" >First name:</label>
+					<input id="firstName" type="text" required="required" tabindex="1" role="textbox"  class="letters" validate ng-model="user.first"/> 
+					<label for="firstNameError" id="firstNameError" class="error"></label>
+					<br />
+					<label for="lastName">Last name:</label>
+					<input id="lastName" type="text" required="required" tabindex="2" role="textbox" class="letters" validate ng-model="user.last"/>  
+					<label for="lastNameError" id="lastNameError" class="error"></label>
+					<br />
+					<label for="password">Password:</label>
+					<input id="password" type="password" required="required" tabindex="3" role="textbox" class="pass" validate ng-model="user.pass"/> 
+					<label for="passwordError" id="passwordError" class="error"></label>                                            
+					<br />                                 
+					<label for="ok" id="ok"></label>   
+					<p><button type="submit" tabindex="4" role ="button" ng-click="validate()">Signup</button></p>
+				</fieldset>
+			</form>
+		</div>
+		<!--uncomment this to see the test run in the test.js file <div id="qunit"></div>-->
+	</body>
+</html>

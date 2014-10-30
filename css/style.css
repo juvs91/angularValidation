@@ -1,0 +1,11 @@
+.error{
+	color:red;
+}
+#ok{
+	color:green;
+}
+.center{
+	margin-left: auto;
+    margin-right: auto;   
+	width: 70%;
+}
